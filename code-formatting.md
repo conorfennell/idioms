@@ -1,3 +1,5 @@
-Item 1: Use default code standard of language
+### Code Style Guidelines
 
-Item 2: Do not add exceptions in the configuration for formatter, do it in the code when needed.
+1. **Code Standards**: Adhere to the default code standard of the language.
+
+2. **Formatter Configuration**: Avoid adding exceptions in the formatter configuration; instead, handle exceptions directly in the code as needed.

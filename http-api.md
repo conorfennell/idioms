@@ -1,13 +1,17 @@
-Item 1: Use lowercase `/items` not `/Items` to avoid the ambiguity around URL case-sensitivity
+### API Design Guidelines
 
-Item 2: Use plural `/items` not `/item` and edge case singular e.g. `/health` and `/config`
+1. **URL Case Sensitivity**: Use lowercase `/items` instead of `/Items` to avoid ambiguity around URL case-sensitivity.
 
-Item 3: CRUD paradigm only use nouns and leave action be the HTTP verb, unless you are adding something to your API that doesn't fit the CRUD paradigm
+2. **Plurality and Exceptions**: Prefer plural forms `/items` over singular `/item`, with exceptions for edge cases such as `/health` and `/config`.
 
-Item 4: For individual resources, include resource identifiers in the path, not the query. `/items/22` instead of `/items?id=22`
+3. **CRUD Paradigm**: Stick to nouns and use the HTTP verb to denote the action, except when adding non-CRUD elements to your API.
 
-Item 5: Query part of the URL is for search and filtering and commonly used with a resource list endpoint `/items?attribute_a=anna?limit=20`
+4. **Resource Identifiers**: For individual resources, include resource identifiers in the path (e.g., `/items/22`) instead of in the query parameters (`/items?id=22`).
 
-Item 6: Nouns that are compounds of multiple words should a hyphen as a separator `/legal-items/33`
+5. **Search and Filtering**: The query part of the URL is reserved for search and filtering, typically used with resource list endpoints (e.g., `/items?attribute_a=anna&limit=20`).
 
-Item 7: GET return 200
+6. **Compound Nouns**: Use a hyphen to separate compound words (e.g., `/legal-items/33`).
+
+7. **Standard Response Codes**: For successful `GET` requests, return a `200` status code.
+
+---
